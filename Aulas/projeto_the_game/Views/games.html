@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os jogos</title>
+</head>
+<body>
+    <h1>Bem vindo a páginas de games!</h1>
+    <hr>
+    {#Exemplo de Jinja2 template engine#}
+    <p>Jogo mais jogado do momento:</p>
+    <ul>
+        <li>Título: {{titulo}} <br></li>
+        <li>Ano: {{ano}} <br></li>
+        <li>Categoria: {{categoria}} <br></li>
+    </ul>
+
+    <p>O jogo {{titulo}} tem {{2025 - ano}} anos.</p>
+    <hr>
+    <p>Estão jogando no momento:</p>
+    <ol>
+        {% for jogador in jogadores %}
+        <li>{{jogador}}</li>
+        {% endfor %}
+    </ol>
+    <hr>
+    {# Criar u7ma seção para exibir uma lista de outros games sendo jogados no momento. a lista deve 
+        possuir 7 jogos e ser não ordenada#}
+
+    <p>Top 7 jogos mais legais: </p>
+    <ul>
+        {% for jogo in jogos %}
+        <li>{{jogo}}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+    <a href="/">volta rapaz</a>
+</body>
+</html>
