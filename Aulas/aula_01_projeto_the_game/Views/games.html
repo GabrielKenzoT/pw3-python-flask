@@ -10,13 +10,16 @@
     <hr>
     {#Exemplo de Jinja2 template engine#}
     <p>Jogo mais jogado do momento:</p>
-    <ul>
-        <li>Título: {{titulo}} <br></li>
-        <li>Ano: {{ano}} <br></li>
-        <li>Categoria: {{categoria}} <br></li>
-    </ul>
+    <!--Percorrendo o dicionario com for -->
+    {% for chave, valor in game.items() %}
+    <details>
+        <summary>{{chave}}</summary>
+        <p>{{valor}}</p>
+    </details>
+   
+    {% endfor %}
 
-    <p>O jogo {{titulo}} tem {{2025 - ano}} anos.</p>
+    <p>O jogo {{game['titulo']}} tem {{2025 - game['ano']}} anos.</p>
     <hr>
     <p>Estão jogando no momento:</p>
     <ol>
