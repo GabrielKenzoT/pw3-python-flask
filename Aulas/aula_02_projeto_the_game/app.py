@@ -8,7 +8,7 @@ from controllers import routes
 app = Flask(__name__, template_folder='views')
 
 
-#enciando o flask (app para a função init_app do routes)
+#iniciando o flask (app para a função init_app do routes)
 routes.init_app(app)
 
 if __name__ == '__main__':
