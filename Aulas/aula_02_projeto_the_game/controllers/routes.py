@@ -56,5 +56,11 @@ def init_app(app):
         
     @app.route('/console', methods=['GET','POST'])
     def console():
+        if request.method == 'POST':
+            if request.form.get('nome') and request.form.get('ano') and request.form.get('marca'):
+                consolelist.append({'nome': request.form.get('nome'),
+                                    'ano': request.form.get('ano'),
+                                    'marca': request.fomr.get('marca')})
+                
         return render_template('console.html',
                                consolelist = consolelist)
