@@ -1,0 +1,1 @@
+alert('Se você está lendo isso o javasript foi importado com sucesso!')
