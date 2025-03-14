@@ -54,13 +54,13 @@ def init_app(app):
         return render_template('cadgames.html', 
                                gamelist=gamelist)
         
-    @app.route('/console', methods=['GET','POST'])
-    def console():
+    @app.route('/consoles', methods=['GET','POST'])
+    def consoles():
         if request.method == 'POST':
             if request.form.get('nome') and request.form.get('ano') and request.form.get('marca'):
                 consolelist.append({'nome': request.form.get('nome'),
                                     'ano': request.form.get('ano'),
-                                    'marca': request.fomr.get('marca')})
+                                    'marca': request.form.get('marca')})
                 
-        return render_template('console.html',
+        return render_template('consoles.html',
                                consolelist = consolelist)
