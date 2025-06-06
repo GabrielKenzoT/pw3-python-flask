@@ -13,7 +13,7 @@ class Game(db.Model):
     preco = db.Column(db.Float)
     
     # Metodo construtor da classe
-    def _init_(self, titulo, ano, categoria, plataforma, preco):
+    def __init__(self, titulo, ano, categoria, plataforma, preco):
         self.titulo = titulo
         self.ano = ano
         self.categoria = categoria

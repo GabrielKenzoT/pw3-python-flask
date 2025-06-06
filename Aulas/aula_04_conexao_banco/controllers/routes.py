@@ -98,7 +98,6 @@ def init_app(app):
             g.categoria = request.form['categoria']
             g.plataforma = request.form['plataforma']
             g.preco = request.form['preco']
-            g.quantidade = request.form['quantidade']
             db.session.commit()
             return redirect(url_for('estoque'))
         return render_template('editgame.html', g=g)
