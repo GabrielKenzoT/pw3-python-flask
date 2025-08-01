@@ -1,0 +1,30 @@
+Api(Application Programming Interface):
+
+-> Interface de Programação e Aplicação.
+-> Conjunto de Regras e definições que permite que diferentes software se comuniquem entre si.
+-> E um conector que deixa diferentes programas conversarem entre si.
+-> Dá regras e maneiras corretas de se comunicar com o sistema.
+-> Justa sistemas diferentes.
+-> Acesso a dados em serviços online, conectar com apps de terceiros, automatizar tarefas, etc.
+
+
+Exemplo:
+Python/Flask <----> Bd de endereços
+Whats <----> App de Fotos
+
+Google Maps;
+Twitter API;
+Facebook Graph API;
+Youtube API;
+GitHub API;
+NASA API;
+Instagram API;
+
+
+Api Rest(Representations Stateless) = Modelo de Api usado em Web, não guarda informações do cliente.
+-> Métodos Http: GET, POST, PUT, DELETE...
+-> Navegador só consegue usar GET e POST.
+
+
+
+Json = Formato de dados usado por APIs para transformar dados
