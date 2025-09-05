@@ -80,11 +80,14 @@ def init_app(app):
             g.titulo = request.form['titulo']
             g.ano = request.form['ano']
             g.categoria = request.form['categoria']
+            g.console_id = request.form['console']
             g.preco = request.form['preco']
             g.quantidade = request.form['quantidade']
             db.session.commit()
             return redirect(url_for('gamesEstoque'))
-        return render_template('editgame.html', g=g)
+        #seleciona todos os consoles
+        consoles = Console.query.all()
+        return render_template('editgame.html', g=g, consoles=consoles)
 
     # CRUD CONSOLES - LISTAGEM, CADASTRO E EXCLUSÃO
     @app.route('/consoles/estoque', methods=['GET', 'POST'])

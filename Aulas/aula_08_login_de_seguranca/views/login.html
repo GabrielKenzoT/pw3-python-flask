@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" style="background-color: #f0f0f0; border-radius: 8px;">
+    <div class="card mt-4">
+        <div class="card-body m-auto">
+            <form action="">
+                <label>Email:</label>
+                <input type="email" name="email" 
+                class="form-control mb-2" placeholder="email@exemplo.com">
+                <label>Senha:</label>
+                <input type="password" name="senha" 
+                class="form-control mb-2" placeholder="Insira sua senha...">
+                <button class="btn btn-danger btn-block w-100" type="submit">Entrar</button>
+            </form>
+            <hr>
+            <h6>Não possui conta? <a href="#">Cadastre-se!</a></h6>
+        </div>
+    </div>
+</div>
+{% endblock content %}
